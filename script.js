@@ -32,6 +32,8 @@ function processApi(cityname) {
             locationlocaltime.innerHTML = str;
             currentconditiontext.innerHTML = data.current.condition.text;
             weatherpic.src = data.current.condition.icon;
+            currenttemp_c.innerHTML = data.current.temp_c;
+            console.log(data.current.temp_c);
         });
     const url2 = 'https://api.weatherapi.com/v1/astronomy.json?key=d163009cd62b49b895e151812232501&q=' + cityname;
     fetch(url2, options)
